@@ -20,18 +20,12 @@ public class ArticleServlet extends SlingAllMethodsServlet {
           response.getWriter().write("Response is coming from ArticleServlet--->GET");
 
     }
-
     @Override
-protected void doPut(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {
-    String contentType = request.getContentType();
-    if ("application/json".equals(contentType)) {
-        response.getWriter().write("JSON content received successfully");
-    } else {
-        response.setStatus(415); // Unsupported Media Type
-        response.getWriter().write("Unsupported Content-Type: " + contentType);
-    }
-}
+    protected void doPut(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {
+          response.getWriter().write("Response is coming from ArticleServlet--->PUT");
 
+    }
+    
 
     @Override
     protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {
