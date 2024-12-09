@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies Webpage Body</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    /* Background with a Movies Image */
+    body {
+      background: url('https://www.w3schools.com/w3images/movie.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+
+    /* Overlay for better readability */
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 50px 0;
+    }
+
+    /* Featured Movies Section */
+    .featured-movies {
+      background-color: rgba(255, 99, 71, 0.8); /* Soft Red background */
+      color: white;
+      padding: 40px 0;
+      border-radius: 8px;
+    }
+
+    .movie-card {
+      background-color: #f8f9fa; /* Light gray cards */
+      border-radius: 8px;
+      margin: 15px;
+      padding: 20px;
+      color: #333;
+      text-align: center;
+    }
+
+    .movie-card h5 {
+      color: #DC3545; /* Red text for movie title */
+    }
+
+    .movie-card p {
+      font-size: 18px;
+    }
+
+    .movie-card a {
+      text-decoration: none;
+      color: #007BFF; /* Blue for links */
+    }
+
+    .movie-card a:hover {
+      text-decoration: underline;
+    }
+
+    /* Top Actors Section */
+    .top-actors {
+      background-color: rgba(0, 123, 255, 0.7); /* Soft Blue background */
+      padding: 40px 0;
+      border-radius: 8px;
+    }
+
+    .actor-card {
+      background-color: #f1f1f1; /* Light gray background for actor cards */
+      color: #333;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .actor-card h5 {
+      color: #6c757d; /* Neutral color for actor names */
+    }
+
+    .actor-card p {
+      font-size: 18px;
+    }
+
+    /* Upcoming Releases Section */
+    .upcoming-releases {
+      background-color: rgba(40, 167, 69, 0.8); /* Soft Green background for upcoming releases */
+      padding: 40px 0;
+      color: white;
+      border-radius: 8px;
+    }
+
+    .release-card {
+      background-color: #ffffff; /* White for release cards */
+      color: #333;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .release-card h5 {
+      color: #28A745; /* Green text for release names */
+    }
+
+    .release-card p {
+      font-size: 18px;
+    }
+
+    /* Button Styling */
+    .btn-custom {
+      background-color: #FF6347;
+      color: white;
+      border: none;
+    }
+
+    .btn-custom:hover {
+      background-color: #FF4500;
+    }
+
+    /* Responsive text and padding */
+    h2 {
+      font-family: 'Arial', sans-serif;
+      font-weight: 600;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Overlay for content visibility -->
+  <div class="overlay">
+
+    <!-- Featured Movies Section -->
+    <section class="featured-movies text-center">
+      <div class="container">
+        <h2 class="mb-4">Featured Movies</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="movie-card">
+              <h5>Avengers: Endgame</h5>
+              <p>Release Date: April 26, 2019</p>
+              <a href="#">View Details</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="movie-card">
+              <h5>Inception</h5>
+              <p>Release Date: July 16, 2010</p>
+              <a href="#">View Details</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="movie-card">
+              <h5>The Dark Knight</h5>
+              <p>Release Date: July 18, 2008</p>
+              <a href="#">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Actors Section -->
+    <section class="top-actors text-center">
+      <div class="container">
+        <h2 class="mb-4">Top Actors</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="actor-card">
+              <h5>Robert Downey Jr.</h5>
+              <p>Known for: Iron Man, Sherlock Holmes</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="actor-card">
+              <h5>Leonardo DiCaprio</h5>
+              <p>Known for: Titanic, Inception</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="actor-card">
+              <h5>Scarlett Johansson</h5>
+              <p>Known for: Black Widow, Lost in Translation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Releases Section -->
+    <section class="upcoming-releases text-center">
+      <div class="container">
+        <h2 class="mb-4">Upcoming Releases</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="release-card">
+              <h5>Avatar 3</h5>
+              <p>Release Date: December 22, 2024</p>
+              <p>Location: Worldwide</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="release-card">
+              <h5>Guardians of the Galaxy Vol. 3</h5>
+              <p>Release Date: May 5, 2024</p>
+              <p>Location: Worldwide</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="release-card">
+              <h5>Mission: Impossible 8</h5>
+              <p>Release Date: July 14, 2024</p>
+              <p>Location: Worldwide</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Button to View More -->
+    <div class="text-center">
+      <a href="#" class="btn btn-custom">View More Movies & Actors</a>
+    </div>
+
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

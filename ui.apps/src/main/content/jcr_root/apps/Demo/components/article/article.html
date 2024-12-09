@@ -1,22 +1,19 @@
-<div data-sly-use.model = com.adobe.aem.guides.demo.core.models.ArticleModelImpl></div>
+<head data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
 
-${model.articleTitle}<br>
+    <!--/* for css+js */-->
+    <meta data-sly-call="${clientLib.all @ categories='clientlib-article'}" data-sly-unwrap />
 
-${model.articleDes}<br>
+    
+    
+    <div class="description">${properties.description} <br> </div>
+    
+    <div class = "title">${properties.title} </div> <br> 	
+    
+    <img src=${properties.image}> <br>
 
-<img src = ${model.articleImage}/> <br>
+    <div class=date>${'dd-mm-yyyy' @format=properties.date}</div> <br>
 
-${'dd-mm-yyyy' @format = model.articlePublishDate}<br>
+    ${properties.number}  <br>
 
-${model.articleNumber}<br>
-
-${model.articleMultifield}<br>
-
-<h1> Page Name: ${model.PageName} </h1>
-
-<h2>Jcr Created: ${model.jcrCreated}</h2>
-
-
-
-
-
+   
+    
