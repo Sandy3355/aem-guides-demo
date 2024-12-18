@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          jcr:title="NavbarComponent">
+
+    <content jcr:primaryType="nt:unstructured"
+             sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+
+            <!-- Navbar Section -->
+            <navbar jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                    jcr:title="Navbar">
+                <items jcr:primaryType="nt:unstructured">
+
+                    <!-- Home Link -->
+                    <homeLink jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                              fieldLabel="Home Link"
+                              name="./homeLink"
+                              placeholder="Enter Home URL"/>
+
+                    <!-- About Link -->
+                    <aboutLink jcr:primaryType="nt:unstructured"
+                               sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                               fieldLabel="About Link"
+                               name="./courselink"
+                               placeholder="Enter About URL"/>
+
+                    <!-- Services Link -->
+                    <servicesLink jcr:primaryType="nt:unstructured"
+                                  sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                  fieldLabel="Services Link"
+                                  name="./lessonsLink"
+                                  placeholder="Enter Services URL"/>
+
+                    <!-- Contact Link -->
+                    <contactLink jcr:primaryType="nt:unstructured"
+                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                 fieldLabel="Contact Link"
+                                 name="./blogLink"
+                                 placeholder="Enter Contact URL"/>
+
+                    <contactLink jcr:primaryType="nt:unstructured"
+                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                 fieldLabel="Contact Link"
+                                 name="./contactLink"
+                                 placeholder="Enter Contact URL"/>            
+                </items>
+            </navbar>
+
+        </items>
+    </content>
+</jcr:root>

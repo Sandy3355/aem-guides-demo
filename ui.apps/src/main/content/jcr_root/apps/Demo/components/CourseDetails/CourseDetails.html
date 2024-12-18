@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Courses</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f8;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #6c3483;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        /* Container for Featured Courses */
+        .featured-courses {
+            width: 100%;
+            
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top:20px;
+        }
+
+        /* Course Card Layout */
+        .course-card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            padding: 0;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Left Side Image */
+        .CourseImage {
+            width: 30%;
+            height:20%;
+        }
+
+        /* Right Side Content */
+        .course-content {
+            width: 50%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 20px;
+            margin-left: 10%;
+        }
+
+        .course-content h3 {
+            font-size: 2rem;
+            color: #4a235a;
+            font-weight: bold;
+        }
+
+        .course-content p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.5;
+        }
+
+        .course-content .cost {
+            font-size: 1.2rem;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        /* Learn More Button */
+        .learn-more {
+            background-color: #8e44ad;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+            text-align: center;
+            width: fit-content;
+        }
+
+        .learn-more:hover {
+            background-color: #9b59b6;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="featured-courses" data-sly-use.course="com.adobe.aem.guides.demo.core.models.CourseDetailsModel">
+        
+        <!-- Course Card -->
+        <div class="course-card">
+            <!-- Left Side: Course Image -->
+            <img class="CourseImage" src="${properties.courseLogo}" alt="Course Logo">
+
+            <!-- Right Side: Content -->
+            <div class="course-content">
+                <h3>${properties.courseName}</h3>
+                <p>${properties.courseDescription}</p>
+                <p class="cost">Cost: ${properties.courseCost}</p>
+                <a href="#" class="learn-more">Learn More</a>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

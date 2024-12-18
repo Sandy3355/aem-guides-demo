@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Component</title>
+    <style>
+        /* Styling for Header Component */
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #f8f9fa;
+            border-bottom: 1px solid #ddd;
+        }
+        .logo img {
+            max-height: 50px;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        .search-bar input {
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <!-- Platform Logo -->
+    <div class="logo">
+        <img src="/content/dam/your-platform/logo.png" alt="Platform Logo">
+    </div>
+
+    
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+        <input type="text" placeholder="Search here..." name="searchQuery">
+    </div>
+</header>
+
+</body>
+</html>

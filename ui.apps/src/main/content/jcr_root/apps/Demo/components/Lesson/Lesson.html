@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson</title>
+</head>
+<body>
+
+    <div class="lesson-content" data-sly-use.lesson="com.adobe.aem.guides.demo.core.models.LessonModel">
+        <!-- Lesson Card -->
+        <div class="lesson-card">
+            
+            <!-- Left Side: Video -->
+            <div class="video-section">
+                <h3>Video:</h3>
+                <video controls>
+                    <source src="${properties.video}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <!-- Right Side: Lesson Information -->
+            <div class="lesson-info">
+                <h2>${properties.lessontitle}</h2>
+                <div class="lesson-topics">
+                    <h3>Lesson Topics:</h3>
+                    <ul>
+                        <sly data-sly-use.fields="${fields}">
+                            <sly data-sly-list="${fields}">
+                                <li>${fields}</li>
+                            </sly>
+                        </sly>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

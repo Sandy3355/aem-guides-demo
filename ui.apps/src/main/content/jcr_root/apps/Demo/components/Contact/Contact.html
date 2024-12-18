@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Details</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+            padding: 40px 0;
+        }
+
+        .contact-details {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-details h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: #6c3483;
+            margin-bottom: 30px;
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+        }
+
+        .contact-item .label {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #4a235a;
+        }
+
+        .contact-item .value {
+            font-style: italic;
+            font-size: 1rem;
+            color: #7d3c98;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .submit-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* Submit Button Styling */
+        .submit-button {
+            background-color: #8e44ad;
+            color: #fff;
+            border: none;
+            padding: 18px 35px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #9b59b6;
+        }
+
+        .submit-button:active {
+            background-color: #7d3c98;
+        }
+
+        .submit-button:focus {
+            outline: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .contact-details {
+                padding: 20px;
+            }
+            .contact-item .label {
+                font-size: 1rem;
+            }
+            .contact-item .value {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-details">
+        <h2>Contact Information</h2>
+
+        <!-- Display Email, Phone, and Comments with each field stacked vertically -->
+        <div class="contact-item">
+            <span class="label">Email:</span>
+            <span class="value">${properties.email}</span>
+        </div>
+
+        <div class="contact-item">
+            <span class="label">Phone Number:</span>
+            <span class="value">${properties.phone}</span>
+        </div>
+
+        <div class="contact-item">
+            <span class="label">Comments:</span>
+            <span class="value">${properties.comments}</span>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="submit-container">
+            <form action="/submit" method="post">
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

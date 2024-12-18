@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite"
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          jcr:title="CourseListing">
+
+    <content jcr:primaryType="nt:unstructured"
+             sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+
+            <!-- Header Configuration -->
+            <header jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                    jcr:title="Header">
+                <items jcr:primaryType="nt:unstructured">
+                    <SearchBar
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                        fieldLabel="Search Bar Placeholder"
+                        name="./searchBarPlaceholder"/>
+                    <EnableFilters
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                        fieldLabel="Enable Filters"
+                        name="./enableFilters"
+                        value="true"
+                        granite:data="someValue"/> <!-- Ensure granite:data is used correctly -->
+                </items>
+            </header>
+
+            <!-- Filters Section -->
+            <filters jcr:primaryType="nt:unstructured"
+                     sling:resourceType="granite/ui/components/coral/foundation/container"
+                     jcr:title="Filters">
+                <items jcr:primaryType="nt:unstructured">
+                    <CategoryFilter
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Category Filter"
+                        name="./categoryFilter">
+                        <items jcr:primaryType="nt:unstructured">
+                            <JAVA
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/option"
+                                text="JAVA"
+                                value="JAVA"/>
+                            <AEM
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/option"
+                                text="AEM"
+                                value="AEM"/>
+                            <Python
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/option"
+                                text="PYTHON"
+                                value="PYTHON"/>
+                            <Full-Stack
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/option"
+                                text="FULLSTACK"
+                                value="FULLSTACK"/>
+                            <SalesForce
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/option"
+                                text="SALESFORCE"
+                                value="SALESFORCE"/>
+                        </items>
+                    </CategoryFilter>
+                    <PriceFilter
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                        fieldLabel="Price Filter"
+                        name="./priceFilter">
+                        <items jcr:primaryType="nt:unstructured">
+                            <Free
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/option"
+                                text="Free"
+                                value="free"/>
+                            <Paid
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/option"
+                                text="Paid"
+                                value="paid"/>
+                        </items>
+                    </PriceFilter>
+                </items>
+            </filters>
+
+        </items>
+    </content>
+</jcr:root>

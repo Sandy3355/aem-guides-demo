@@ -1,19 +1,17 @@
+
 <head data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
 
-    <!--/* for css+js */-->
-    <meta data-sly-call="${clientLib.all @ categories='clientlib-article'}" data-sly-unwrap />
+<!--/* for css+js */-->
+<meta data-sly-call="${clientLib.all @categories='clientlib-digital'}" data-sly-unwrap></meta>
 
-    
-    
-    <div class="description">${properties.description} <br> </div>
-    
-    <div class = "title">${properties.title} </div> <br> 	
-    
-    <img src=${properties.image}> <br>
 
-    <div class=date>${'dd-mm-yyyy' @format=properties.date}</div> <br>
+<div class"des">${properties.des}   <br></div>
+<div class"title"> ${properties.title}   <br></div>
+<img src=${properties.image}>   <br>
+<div >${'dd-MM-yyyy' @format =properties.date}</div>  <br>
+ ${properties.number} <br>
+ ${properties.checkbox}
 
-    ${properties.number}  <br>
+<h2>JavaScript Alert</h2>
 
-   
-    
+<button onclick="myFunction()">On click</button>

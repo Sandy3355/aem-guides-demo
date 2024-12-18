@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Component</title>
+    <style>
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+        }
+
+        .navbar a:hover {
+            background-color: #575757;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="${properties.homeLink @ context='uri'}">Home</a>
+        <a href="${properties.courselink @ context='uri'}">Courses</a>
+        <a href="${properties.lessonsLink @ context='uri'}">Lessons</a>
+        <a href="${properties.blogLink @ context='uri'}">Blogs</a>
+        <a href="${properties.contactLink @ context='uri'}">ContactUs</a>
+    </nav>
+</body>
+</html>

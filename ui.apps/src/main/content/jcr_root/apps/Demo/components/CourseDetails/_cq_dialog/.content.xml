@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" 
+          xmlns:cq="http://www.day.com/jcr/cq/1.0" 
+          xmlns:jcr="http://www.jcp.org/jcr/1.0" 
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="Featured Courses Component"
+          sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container"
+        fieldLabel="Featured Courses">
+        <items jcr:primaryType="nt:unstructured">
+            <courses
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                fieldLabel="Courses">
+                <field
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/container">
+                    <items jcr:primaryType="nt:unstructured">
+                        <courseLogo
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                            fieldLabel="Course Logo"
+                            name="./courseLogo"/>
+                        <courseName
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                            fieldLabel="Course Name"
+                            name="./courseName"/>
+                        <courseDescription
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/textarea"
+                            fieldLabel="Course Description"
+                            name="./courseDescription"/>
+                        <courseCost
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                            fieldLabel="Course Cost"
+                            name="./courseCost"/>
+                        <courseRating
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/select"
+                            fieldLabel="Course Rating"
+                            name="./courseRating">
+                            <items jcr:primaryType="nt:unstructured">
+                                <item
+                                    jcr:primaryType="nt:unstructured"
+                                    text="5 Stars"
+                                    value="5"/>
+                                <item
+                                    jcr:primaryType="nt:unstructured"
+                                    text="4 Stars"
+                                    value="4"/>
+                                <item
+                                    jcr:primaryType="nt:unstructured"
+                                    text="3 Stars"
+                                    value="3"/>
+                                <item
+                                    jcr:primaryType="nt:unstructured"
+                                    text="2 Stars"
+                                    value="2"/>
+                                <item
+                                    jcr:primaryType="nt:unstructured"
+                                    text="1 Star"
+                                    value="1"/>
+                            </items>
+                        </courseRating>
+                        <learnMore
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                            fieldLabel="Learn More"
+                            name="./learnMore"/>
+                        <instructors
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/multifield"
+                            fieldLabel="Instructors">
+                            <field
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <instructorLogo
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                        fieldLabel="Instructor Logo"
+                                        name="./instructorLogo"/>
+                                    <instructorName
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                        fieldLabel="Instructor Name"
+                                        name="./instructorName"/>
+                                    <instructorExperience
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                        fieldLabel="Instructor Experience"
+                                        name="./instructorExperience"/>
+                                </items>
+                            </field>
+                        </instructors>
+                    </items>
+                </field>
+            </courses>
+        </items>
+    </content>
+</jcr:root>

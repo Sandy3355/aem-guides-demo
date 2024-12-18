@@ -1,90 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Movies Webpage Footer</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  <style>
-    /* Gradient Background for Movies Footer */
-    .footer-movies {
-      background: linear-gradient(90deg, #FF6347, #FFD700); /* Tomato to Gold Gradient */
-    }
-
-    .footer-movies .text-white,
-    .footer-movies a.text-white {
-      color: white !important;
-    }
-
-    .footer-movies a.text-white:hover {
-      color: #FFEB3B !important; /* Yellow hover effect */
-    }
-
-    /* Social Media Icons */
-    .footer-movies .social-icons a {
-      font-size: 1.6rem;
-      margin-right: 15px;
-    }
-
-    /* Copyright Section */
-    .footer-movies .footer-copyright {
-      background: linear-gradient(90deg, #FFD700, #FF6347); /* Reverse Gradient */
-      padding: 10px;
-    }
-
-    .footer-movies .footer-copyright a {
-      color: white;
-      text-decoration: none;
-    }
-  </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Footer Component</title>
+    <style>
+        .footer-container {
+            background-color: rgb(64, 63, 63);
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            color: white;
+        }
+        .footer-column {
+            flex: 1;
+            margin: 10px;
+            min-width: 200px;
+        }
+        .footer-column h3 {
+            font-size: 18px;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+        .footer-links li {
+            margin-bottom: 5px;
+        }
+        .footer-links a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 14px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .social-icons {
+            display: flex;
+            gap: 10px;
+        }
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
 </head>
 <body>
-  <!-- Footer -->
-  <footer class="text-white text-center text-lg-start footer-movies">
-    <div class="container p-4">
-      <!-- Row with 3 columns -->
-      <div class="row">
-        <!-- About MoviesWorld -->
-        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">About MoviesWorld</h5>
-          <p>
-            Welcome to MoviesWorld! The ultimate destination for movie buffs. Get the latest movie reviews, trailers, news, and showtimes. Discover new releases and all-time favorites in one place.
-          </p>
+    <div class="footer-container">
+
+        <!-- Column 1: Quick Links -->
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+                <li><a href="${properties.udemyLink @ context='uri'}">Udemy.com</a></li>
+                <li><a href="${properties.aboutUsLink @ context='uri'}">About Us</a></li>
+                <li><a href="${properties.eventsLink @ context='uri'}">Events</a></li>
+                <li><a href="${properties.partnersLink @ context='uri'}">Partners & Integrations</a></li>
+                <li><a href="${properties.partnerWithUdemyLink @ context='uri'}">Partner with Udemy</a></li>
+                <li><a href="${properties.productTourLink @ context='uri'}">Take a Product Tour</a></li>
+                <li><a href="${properties.newsLink @ context='uri'}">News</a></li>
+                <li><a href="${properties.investorRelationsLink @ context='uri'}">Investor Relations</a></li>
+                <li><a href="${properties.careersLink @ context='uri'}">Careers – we're hiring!</a></li>
+            </ul>
         </div>
 
-        <!-- Quick Links -->
-        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Quick Links</h5>
-          <ul class="list-unstyled mb-0">
-            <li><a href="#!" class="text-white text-decoration-none">Home</a></li>
-            <li><a href="#!" class="text-white text-decoration-none">Now Playing</a></li>
-            <li><a href="#!" class="text-white text-decoration-none">Upcoming Movies</a></li>
-            <li><a href="#!" class="text-white text-decoration-none">Reviews</a></li>
-          </ul>
+        <!-- Column 2: Contact Us -->
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <ul class="footer-links">
+                <li><a href="${properties.contactUsLink @ context='uri'}">Contact Us</a></li>
+                <li><a href="${properties.helpLink @ context='uri'}">Help</a></li>
+                <li><a href="${properties.termsLink @ context='uri'}">Terms & Conditions</a></li>
+                <li><a href="${properties.privacyLink @ context='uri'}">Privacy Policy</a></li>
+                <li><a href="${properties.sitemapLink @ context='uri'}">Sitemap</a></li>
+            </ul>
         </div>
 
-        <!-- Follow Us -->
-        <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
-          <h5 class="text-uppercase">Follow Us</h5>
-          <div class="social-icons">
-            <a href="#" class="text-white"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="text-white"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="text-white"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="text-white"><i class="bi bi-youtube"></i></a>
-          </div>
+        <!-- Column 3: Follow Us -->
+        <div class="footer-column">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+                <a href="${properties.facebookLink @ context='uri'}" target="_blank" rel="noopener noreferrer">
+                    <img src="/path/to/facebook-icon.png" alt="Facebook">
+                </a>
+                <a href="${properties.linkedinLink @ context='uri'}" target="_blank" rel="noopener noreferrer">
+                    <img src="/path/to/linkedin-icon.png" alt="LinkedIn">
+                </a>
+                <a href="${properties.twitterLink @ context='uri'}" target="_blank" rel="noopener noreferrer">
+                    <img src="/path/to/twitter-icon.png" alt="Twitter">
+                </a>
+                <a href="${properties.instagramLink @ context='uri'}" target="_blank" rel="noopener noreferrer">
+                    <img src="/path/to/instagram-icon.png" alt="Instagram">
+                </a>
+            </div>
         </div>
-      </div>
+
     </div>
-
-    <!-- Copyright -->
-    <div class="text-center footer-copyright">
-      © 2024 MoviesWorld: 
-      <a href="https://www.moviesworld.com" target="_blank">www.moviesworld.com</a>
-    </div>
-  </footer>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

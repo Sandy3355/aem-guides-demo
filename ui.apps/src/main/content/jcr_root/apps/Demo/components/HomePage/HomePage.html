@@ -1,0 +1,44 @@
+<div data-sly-use.model="com.adobe.aem.guides.demo.core.models.HomepageModel">
+    <!-- Banner Section -->
+    <div class="banner">
+        <h2>${properties.bannerTitle}</h2>
+        <p>${properties.bannerSubtitle}</p>
+        <img src="${properties.bannerImage @ context='uri'}" alt="Banner Image">
+    </div>
+
+    <!-- Featured Courses Section -->
+    <div class="featured-courses">
+        <h2>Featured Courses</h2>
+        <div data-sly-list.course="${properties.featuredCoursesResource}">
+            <div class="course">
+                <h3>${properties.title}</h3>
+                <img src="${properties.image @ context='uri'}" alt="${course.title}">
+                <a href="${properties.link @ context='uri'}">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Course Categories Section -->
+    <div class="course-categories">
+        <h2>Course Categories</h2>
+        <div data-sly-list.category="${properties.courseCategoriesResource}">
+            <div class="category">
+                <h3>${properties.name}</h3>
+                <img src="${properties.image @ context='uri'}" alt="${category.name}">
+                <a href="${properties.link @ context='uri'}">Explore</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="testimonials">
+        <h2>Testimonials</h2>
+        <div data-sly-list.testimonial="${properties.testimonialsResource}">
+            <div class="testimonial">
+                <img src="${properties.photo @ context='uri'}" alt="${properties.name}">
+                <p>"${properties.quote}"</p>
+                <p>- ${properties.name}</p>
+            </div>
+        </div>
+    </div>
+</div>

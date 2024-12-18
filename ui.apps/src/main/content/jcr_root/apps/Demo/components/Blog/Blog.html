@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Details</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f6f8;
+            color: #333;
+            padding: 40px 0;
+        }
+
+        .blog-details {
+            max-width: 450px; /* Reduced width */
+            margin: 30px auto; /* Adjusted margins */
+            padding: 20px; /* Reduced padding */
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .blog-details h2 {
+            font-size: 1.8rem; /* Slightly smaller heading */
+            margin-bottom: 20px; /* Reduced spacing */
+            text-align: center;
+            color: #6c3483;
+        }
+
+        .blog-item {
+            margin-bottom: 15px; /* Reduced spacing between items */
+        }
+
+        .blog-item .label {
+            font-weight: bold;
+            font-size: 1rem; /* Reduced label size */
+            color: #4a235a;
+        }
+
+        .blog-item .value {
+            font-style: italic;
+            font-size: 0.9rem; /* Reduced value size */
+            color: #7d3c98;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .submit-container {
+            text-align: center;
+            margin-top: 20px; /* Reduced top margin */
+        }
+
+        /* Submit Button Styling */
+        .submit-button {
+            background-color: #8e44ad;
+            color: #fff;
+            border: none;
+            padding: 12px 30px; /* Reduced padding for the button */
+            font-size: 1rem; /* Smaller button text */
+            font-weight: bold;
+            border-radius: 5px; /* Adjusted button corner radius */
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #9b59b6;
+        }
+
+        .submit-button:active {
+            background-color: #7d3c98;
+        }
+
+        .submit-button:focus {
+            outline: none;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .blog-details {
+                padding: 15px; /* Reduced padding for smaller screens */
+            }
+
+            .blog-item .label {
+                font-size: 0.9rem;
+            }
+
+            .blog-item .value {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="blog-details">
+        <h2>Blog Details</h2>
+
+        <!-- Display Blog Title -->
+        <div class="blog-item">
+            <span class="label">Title:</span>
+            <span class="value">${properties.title}</span>
+        </div>
+
+        <!-- Display Blog Author -->
+        <div class="blog-item">
+            <span class="label">Author:</span>
+            <span class="value">${properties.author}</span>
+        </div>
+
+        <!-- Display Blog Publish Date -->
+        <div class="blog-item">
+            <span class="label">Publish Date:</span>
+            <span class="value">${properties.publishDate}</span>
+        </div>
+
+        <!-- Display Blog Tags -->
+        <div class="blog-item">
+            <span class="label">Tags:</span>
+            <span class="value">${properties.tags}</span>
+        </div>
+
+        <!-- Display Blog Category -->
+        <div class="blog-item">
+            <span class="label">Category:</span>
+            <span class="value">${properties.category}</span>
+        </div>
+
+        <!-- Display Blog Summary -->
+        <div class="blog-item">
+            <span class="label">Summary:</span>
+            <span class="value">${properties.summary}</span>
+        </div>
+
+        <!-- Display Blog Featured Image -->
+        <div class="blog-item">
+            <span class="label">Featured Image:</span>
+            <span class="value">
+                <img src="${properties.featuredImage}" alt="Featured Image" style="max-width: 100%; height: auto; border-radius: 8px;">
+            </span>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="submit-container">
+            <form action="/submit-blog" method="post">
+                <button type="submit" class="submit-button">Submit Blog</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>

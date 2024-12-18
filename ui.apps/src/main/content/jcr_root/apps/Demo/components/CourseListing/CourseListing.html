@@ -1,0 +1,103 @@
+<sly data-sly-use.model="com.adobe.aem.guides.demo.core.models.CourseListModelImpl" data-sly-test.model="${model}">
+    <div class="course-listing">
+
+        <!-- Inline CSS Styling -->
+        <style>
+            .course-listing {
+                margin: 20px;
+                font-family: Arial, sans-serif;
+            }
+
+            .search-bar-input {
+                width: 100%;
+                padding: 8px;
+                font-size: 14px;
+                margin-bottom: 10px;
+            }
+
+            .filters {
+                margin-top: 20px;
+            }
+
+            .filter-toggle {
+                font-weight: bold;
+            }
+
+            .filter-options {
+                display: none;
+                margin-top: 10px;
+            }
+
+            .filter-options[data-visible="true"] {
+                display: block;
+            }
+
+            .category-select, .price-select {
+                width: 100%;
+                padding: 8px;
+                margin-top: 10px;
+            }
+        </style>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" 
+                   placeholder="${model.searchBarPlaceholder @ context='text'}" 
+                   class="search-bar-input" />
+        </div>
+
+        <!-- Filters Section -->
+        <div class="filters">
+            <!-- Enable Filters Checkbox -->
+            <div class="filter-toggle">
+                <label>
+                    <input type="checkbox" class="filter-checkbox" data-filter-enabled="${model.filtersEnabled}">
+                    Enable Filters
+                </label>
+            </div>
+
+            <!-- Filter Options -->
+            <div class="filter-options" data-visible="${model.filtersEnabled}">
+                <!-- Category Filter -->
+                <div class="category-filter">
+                    <label for="category">Category:</label>
+                    <select id="category" class="category-select">
+                        <option value="">Select a category</option>
+                        <sly data-sly-list.category="${model.categories}">
+                            <option value="${category @ context='text'}">${category @ context='text'}</option>
+                        </sly>
+                    </select>
+                </div>
+
+                <!-- Price Filter -->
+                <div class="price-filter">
+                    <label for="price">Price:</label>
+                    <select id="price" class="price-select">
+                        <option value="">Select a price option</option>
+                        <sly data-sly-list.price="${model.priceOptions}">
+                            <option value="${price @ context='text'}">${price @ context='text'}</option>
+                        </sly>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Inline JavaScript -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const checkbox = document.querySelector('.filter-checkbox');
+                const filterOptions = document.querySelector('.filter-options');
+
+                // Toggle filter visibility based on checkbox state
+                checkbox.addEventListener('change', function (event) {
+                    const isChecked = event.target.checked;
+                    filterOptions.style.display = isChecked ? 'block' : 'none';
+                });
+
+                // Initialize visibility based on initial state of filter enabled flag
+                const isFilterEnabled = checkbox.dataset.filterEnabled === 'true';
+                filterOptions.style.display = isFilterEnabled ? 'block' : 'none';
+            });
+        </script>
+    </div>
+</sly>

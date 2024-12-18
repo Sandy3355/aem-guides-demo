@@ -1,0 +1,47 @@
+<div class="sidebar-component">
+
+    <!-- Tab 1: Header -->
+    <div class="header">
+        <p><strong>Logo Path:</strong> ${properties.logoPath}</p>
+        <p><strong>Logo Mobile Image:</strong> ${properties.logoMobileImage}</p>
+        <p><strong>Logo Link:</strong> ${properties.logoLink}</p>
+        <p><strong>Enable Switch:</strong> ${properties.enableSwitch}</p>
+    </div>
+
+    <!-- Tab 2: Header Links -->
+    <div class="header-links">
+        <h2>Header Links</h2>
+        <ul>
+            <li data-sly-repeat.headerLink="headerLinks">
+                <div class="link-text">${properties.textField}</div>
+                <div class="link-image">
+                    <img src="${headerLink.imagePath @ context='uri'}" alt="Header Link Image">
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Sidebar Navigation Section -->
+    <ul>
+        <li data-sly-repeat.navigationItem="navigationItems">
+            <div class="desktop-icon">
+                <img src="${properties.desktopIcon @ context='uri'}" alt="Desktop Icon">
+            </div>
+            <div class="mobile-icon">
+                <img src="${properties.mobileIcon @ context='uri'}" alt="Mobile Icon">
+            </div>
+            <ul>
+                <li data-sly-repeat.nestedUrl="properties.nestedNavigationUrls">
+                    <a href="${nestedUrl.navigationUrl @ context='uri'}" target="_blank">Nested Navigation URL</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- Tab 4: Region -->
+    <div class="region">
+        <h2>Region</h2>
+        <p><strong>Country:</strong> ${properties.country}</p>
+    </div>
+
+</div>

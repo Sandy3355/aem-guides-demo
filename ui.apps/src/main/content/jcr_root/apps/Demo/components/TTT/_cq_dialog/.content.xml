@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="TTT Component"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <textField
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/form/textarea"
+                fieldLabel="Title"
+                name="./textarea"/>
+            <pathField
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                fieldLabel="Path"
+                name="./path"
+                rootPath="/content"/>
+            <multifield
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                fieldLabel="Multifield">
+                <field
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                    name="./field">
+                    <items jcr:primaryType="nt:unstructured">
+                        <textItem
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/textfield"
+                            fieldLabel="Text"
+                            name="./text"/>
+                        <dateItem
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/datepicker"
+                            fieldLabel="Date Picker"
+                            name="./date"/>
+                    </items>
+                    <multifield
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/form/multifield"
+                        fieldLabel="Multifield">
+                        <field
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                            name="./field">
+                            <items jcr:primaryType="nt:unstructured">
+                                <textItem
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                    fieldLabel="Name"
+                                    name="./text"/>
+                            </items>
+                        </field>
+                    </multifield>
+                </field>
+            </multifield>
+            <checkboxField
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                fieldLabel="Enable Display"
+                name="./checkbox"/>
+        </items>
+    </content>
+</jcr:root>

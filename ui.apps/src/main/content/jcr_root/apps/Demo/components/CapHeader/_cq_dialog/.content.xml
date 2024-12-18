@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          jcr:title="HeaderComponent">
+
+    <content jcr:primaryType="nt:unstructured"
+             sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+
+            <!-- Header Section -->
+            <header jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                    jcr:title="Header">
+                <items jcr:primaryType="nt:unstructured">
+
+                    <!-- Platform Logo -->
+                    <Logo jcr:primaryType="nt:unstructured"
+                          sling:resourceType="granite/ui/components/coral/foundation/image"
+                          fileReference="/content/dam/Demo/logo.jpeg"
+                          altText="Platform Logo"
+                          fieldLabel="Platform Logo"/>
+
+                    
+                    <!-- Search Bar -->
+                    <SearchBar jcr:primaryType="nt:unstructured"
+                               sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                               fieldLabel="Search Bar"
+                               name="./searchQuery"
+                               placeholder="Search here..."/>
+
+                </items>
+            </header>
+
+        </items>
+    </content>
+</jcr:root>

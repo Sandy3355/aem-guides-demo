@@ -1,23 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
-    jcr:primaryType="nt:unstructured"
-    jcr:title="Properties"
-    sling:resourceType="cq/gui/components/authoring/dialog">
-    <content
-        jcr:primaryType="nt:unstructured"
-        sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns">
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="cq/gui/components/authoring/dialog"
+          jcr:title="FooterComponent">
+
+    <content jcr:primaryType="nt:unstructured"
+             sling:resourceType="granite/ui/components/coral/foundation/container">
         <items jcr:primaryType="nt:unstructured">
-            <column
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="granite/ui/components/coral/foundation/container">
+
+            <!-- Footer Section -->
+            <footer jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/coral/foundation/container"
+                    jcr:title="Footer">
                 <items jcr:primaryType="nt:unstructured">
-                    <text
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
-                        fieldLabel="Text"
-                        name="./text"/>
+
+                    <!-- Udemy.com -->
+                    <udemyLink jcr:primaryType="nt:unstructured"
+                               sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                               fieldLabel="Udemy Link"
+                               name="./udemyLink"
+                               placeholder="Enter Udemy URL"/>
+
+                    <!-- About Us -->
+                    <aboutUsLink jcr:primaryType="nt:unstructured"
+                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                 fieldLabel="About Us Link"
+                                 name="./aboutUsLink"
+                                 placeholder="Enter About Us URL"/>
+
+                    <!-- Events -->
+                    <eventsLink jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                fieldLabel="Events Link"
+                                name="./eventsLink"
+                                placeholder="Enter Events URL"/>
+
+                    <!-- Partners & Integrations -->
+                    <partnersLink jcr:primaryType="nt:unstructured"
+                                  sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                  fieldLabel="Partners  Integrations Link"
+                                  name="./partnersLink"
+                                  placeholder="Enter Partners  Integrations URL"/>
+
+                    <!-- Partner with Udemy -->
+                    <partnerWithUdemyLink jcr:primaryType="nt:unstructured"
+                                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                          fieldLabel="Partner with Udemy Link"
+                                          name="./partnerWithUdemyLink"
+                                          placeholder="Enter Partner with Udemy URL"/>
+
+                    <!-- Product Tour -->
+                    <productTourLink jcr:primaryType="nt:unstructured"
+                                     sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                     fieldLabel="Take a Product Tour Link"
+                                     name="./productTourLink"
+                                     placeholder="Enter Product Tour URL"/>
+
+                    <!-- News -->
+                    <newsLink jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                              fieldLabel="News Link"
+                              name="./newsLink"
+                              placeholder="Enter News URL"/>
+
+                    <!-- Investor Relations -->
+                    <investorRelationsLink jcr:primaryType="nt:unstructured"
+                                           sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                           fieldLabel="Investor Relations Link"
+                                           name="./investorRelationsLink"
+                                           placeholder="Enter Investor Relations URL"/>
+
+                    <!-- Careers -->
+                    <careersLink jcr:primaryType="nt:unstructured"
+                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                 fieldLabel="Careers Link"
+                                 name="./careersLink"
+                                 placeholder="Enter Careers URL"/>
+
+                    <!-- Contact Us -->
+                    <contactUsLink jcr:primaryType="nt:unstructured"
+                                   sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                   fieldLabel="Contact Us Link"
+                                   name="./contactUsLink"
+                                   placeholder="Enter Contact Us URL"/>
+
+                    <!-- Help -->
+                    <helpLink jcr:primaryType="nt:unstructured"
+                              sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                              fieldLabel="Help Link"
+                              name="./helpLink"
+                              placeholder="Enter Help URL"/>
+
+                    <!-- Terms -->
+                    <termsLink jcr:primaryType="nt:unstructured"
+                               sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                               fieldLabel="Terms of Service Link"
+                               name="./termsLink"
+                               placeholder="Enter Terms of Service URL"/>
+
+                    <!-- Privacy -->
+                    <privacyLink jcr:primaryType="nt:unstructured"
+                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                 fieldLabel="Privacy Policy Link"
+                                 name="./privacyLink"
+                                 placeholder="Enter Privacy Policy URL"/>
+
+                    <!-- Sitemap -->
+                    <sitemapLink jcr:primaryType="nt:unstructured"
+                                 sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                 fieldLabel="Sitemap Link"
+                                 name="./sitemapLink"
+                                 placeholder="Enter Sitemap URL"/>
+
+                    <!-- Social Media -->
+                    <socialMediaSection jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                                        jcr:title="Social Media Links">
+                        <items jcr:primaryType="nt:unstructured">
+
+                            <!-- Facebook -->
+                            <facebookLink jcr:primaryType="nt:unstructured"
+                                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                          fieldLabel="Facebook Link"
+                                          name="./facebookLink"
+                                          placeholder="Enter Facebook URL"/>
+
+                            <!-- LinkedIn -->
+                            <linkedinLink jcr:primaryType="nt:unstructured"
+                                          sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                          fieldLabel="LinkedIn Link"
+                                          name="./linkedinLink"
+                                          placeholder="Enter LinkedIn URL"/>
+
+                            <!-- Twitter -->
+                            <twitterLink jcr:primaryType="nt:unstructured"
+                                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                         fieldLabel="Twitter Link"
+                                         name="./twitterLink"
+                                         placeholder="Enter Twitter URL"/>
+
+                            <!-- Instagram -->
+                            <instagramLink jcr:primaryType="nt:unstructured"
+                                           sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                           fieldLabel="Instagram Link"
+                                           name="./instagramLink"
+                                           placeholder="Enter Instagram URL"/>
+                        </items>
+                    </socialMediaSection>
+
                 </items>
-            </column>
+            </footer>
+
         </items>
     </content>
 </jcr:root>
